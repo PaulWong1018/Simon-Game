@@ -14,9 +14,19 @@ if (gameTrigger == false) {
     nextSequence();
     gameTrigger = true;
   });
+}
+
+if (gameTrigger == false) {
+  //game starts for the first time
 
   //for mobile user
-  $("body").click(function () {
+  $(".mobile-start").click(function () {
+    $(".mobile-start").addClass("pressed"); // <-- add shadow
+
+    setTimeout(() => {
+      $(".mobile-start").removeClass("pressed"); // <-- Cancel shadow
+    }, 100);
+
     nextSequence();
     gameTrigger = true;
   });
