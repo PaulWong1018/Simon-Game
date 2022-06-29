@@ -9,7 +9,14 @@ var level = 0;
 if (gameTrigger == false) {
   //game starts for the first time
 
+  //for PC user
   $("body").keypress(function () {
+    nextSequence();
+    gameTrigger = true;
+  });
+
+  //for mobile user
+  $("body").click(function () {
     nextSequence();
     gameTrigger = true;
   });
